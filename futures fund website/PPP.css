@@ -24,6 +24,81 @@ body {
     overflow-y: scroll;
 }
 
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 0%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  /* background-color: rgb(0,0,0); Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* hides the text when dropdown not clicked */
+  overflow: hidden; /* removes scrollbar from dropdown */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 15%; /* % from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* top margin to avoid conflict with the close button on smaller screens */
+}
+
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: -17px;
+    right: 38px;
+    font-size: 65px;
+    /* font-weight: 1000; */
+    z-index: 101;
+}
+
+/* When the height of the screen is less than 600 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 600px) {
+  .overlay a {font-size: 20px}
+}
+
+@media screen and (max-width: 450px) {
+  .overlay a {font-size: 20px}
+}
+
+@media screen and (min-width: 980px) {
+  .overlay a {
+      font-size: 40px;
+      display: inline-block;
+      margin: 50px;
+  }
+.overlay .closebtn {
+    position: absolute;
+    top: -67px;
+    right: -12px;
+    font-size: 65px;
+    z-index: 101;
+}
+}
+
 header {
     width: 100%; 
     min-height: 100vh; 
@@ -81,7 +156,7 @@ section {
 .container {
     margin: auto;
     /* margin: auto; centers text horizontally */
-    max-width: 750px;
+    max-width: 700px;
     /* limits container width for large screens */
     padding: 80px 40px;
     color: #212121;
@@ -96,4 +171,19 @@ section {
 .container p {
     padding-top: 20px;
     line-height: 1.8;
+}
+
+.container.project {
+    padding-top: 0;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer {
+    margin: 20px;
 }
