@@ -99,6 +99,7 @@ body {
 }
 }
 
+
 header {
     width: 100%; 
     min-height: 100vh; 
@@ -117,7 +118,7 @@ header::before {
     right: 0;
     bottom: 0;
     display: block;
-    background-image: url('media/computerdesk.jpg');
+    background-image: url('/website\ design\ ideas/media/computerdesk.jpg');
     background-size: cover;
     z-index: 0;
     /* higher z-index numbers = greater importance */
