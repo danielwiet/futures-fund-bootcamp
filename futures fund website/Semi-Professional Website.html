@@ -22,7 +22,7 @@
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
-                <a href="#">Contact</a>
+                <a href="mailto:danwiet@gmail.com" >Contact</a>
             </div>
         </div>
     
@@ -48,29 +48,33 @@
 
     <section>
         <div class='container'>
-            <h3 id='about'>Semi-Professional Page</h3>
+            <h3 id='about'>About Me</h3>
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed at pariatur sit eaque doloresexercitationem nobis eius placeat cum magnam, rem veniam deserunt quidem excepturi, iusto unde, officiis adipisci aut.
+            <p>Welcome to my wonderful website. If you are new here, please take a look around. You might just <a id="hiddenLink">find</a> something interesting about me.
             </p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, eum obcaecati! Vero, voluptate! Nesciunt amet minima, sed dignissimos explicabo sit quo quas veritatis aliquam ipsa totam fugiat officiis tempora! Ab?</p>
+            <p id="easterEgg"></p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, soluta neque, facere iure excepturi, voluptatibus minima dicta provident quidem autem illum doloribus dolorem harum? Distinctio tempora aliquam labore voluptatem aut?</p>
+            <p>I work in coastal environmental restoriation at Pontchatrain Conservancy. There, I am the Coastal Data Sharing Program Developer and Technology Coordinator. Part of my job requires handling data requests as they come in and packaging different data sets (either the raw salinity data or interpolated salinity contours) for the end user. Folks who use the data are primarily other non profits, government agencies, and academic institutions. Sometimes we get requests from commercial and recreational fisher-folk who are trying to get a sense of the salinity and where the fish might be biting.</p>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rerum, iusto perferendis, neque quos adipisci vero optio est dolore nobis molestiae. Maiores odit ipsam incidunt quisquam mollitia
-            repellendus quos obcaecati!</p>
+            <p>Another aspect of my job is to assist different departments with their technology needs. This might mean updating a webpage (using wordpress, and maybe soon actual HTML/CSS and javascript in the near future!)vor the gift shop, creating maps for tree identification, or operating a drone for restoration monitoring.</p>
+
+            <p>Recently, I've been helping the education department with a marine debris project, specifically the data collection, interpretation, and visualization. You can learn more about this project <a href="#" style="cursor: pointer; text-decoration: none;">here</a></p>
         </div>
 
         <div class='container project'>
             <h3 id="projects">Projects</h3>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium inventore id, natus deleniti non tempore quod soluta, illo qui ducimus optio reprehenderit consectetur perferendis dignissimos. Adipisci, maiores quo! Sit, distinctio.</p>
+            <p>Before learing HTML/CSS and Javascript, I had been teaching myself Python. It is a useful language for data analysis and for writing scripts to automate tedious tasks. Recently, I wrote a script that bulk imports salinty shapefiles into ArcGis Pro and uploads it to an online server, with the idea that people that need that data can go online and fetch it themselves, without having a dedicated person to handle the data requests. That project is <a href="#" style="cursor: pointer; text-decoration: none;">here</a> if you want to see how I did it.</p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sapiente qui dignissimos! Nam, suscipit pariatur nisi accusamus atque ipsam qui! Natus, incidunt ullam modi obcaecati a ab. Hic, numquam facere?</p>
+            <p>I'm also currently the only FAA licensed drone pilot at the organization. Besides looking very interesting, drone footage is useful for community and public outreach. Below is an example of a planting site around the Manchac landbridge near Ruddock, LA. <br> <video src="/futures fund website/media/Galva_canal.mp4" type="video/mp4" width="620px" style="padding-top: 10px;" controls preload></video></p>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium inventore id, natus deleniti non tempore quod soluta, illo qui ducimus optio reprehenderit consectetur perferendis dignissimos. Adipisci, maiores quo! Sit, distinctio.</p>
-                        
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sapiente qui dignissimos! Nam, suscipit pariatur nisi accusamus atque ipsam qui! Natus, incidunt ullam modi obcaecati a ab. Hic, numquam facere?</p>
+        </div>
+
+        <div class="container wrapUp">
+            <h3 id="wrapUp">Wrapping Up</h3>
+
+            <p>I've gained a lot from this project and I'm excited to continue the process of learning in levels 2 and 3 and beyond. This site is by no means complete, and I will continue to add content to the site. </p>
         </div>
     </section>
 
@@ -78,6 +82,16 @@
         <a class='footer' href="#home">Back to the top</a>
         <p class='footer'>New Orleans, LA</p>
     </footer>
+
+    <script>
+       function script() {
+           document.getElementById('easterEgg').innerHTML = 'You just found the first Easter Egg! To learn more about them, <a href="https://en.wikipedia.org/wiki/Easter_egg_(media)">click here</a>.<br>(By the way, an interesting tidbit is that I love cooking! Crab boil, anyone?)<br> <img class="hidden_image" src="/futures fund website/media/crab_boil.jpg" alt="cooked crabs in a pot">';
+        };
+
+        document.getElementById('hiddenLink').onclick = function () {
+            script();
+        };
+    </script>
 </body>
 
 </html>
