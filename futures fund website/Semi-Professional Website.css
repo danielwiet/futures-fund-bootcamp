@@ -121,7 +121,7 @@ header::before {
     background-size: cover;
     z-index: 0;
     /* higher z-index numbers = greater importance */
-    transform: translateZ(-4px) scale(2);
+    transform: translateZ(-3.94px) scale(2);
 }
 
 header div {
@@ -187,11 +187,10 @@ section {
 
 .hidden_image {
     margin: auto;
-    max-width: 620px;
-    padding: 20px 40px;
+    padding-top: 20px;
+    max-width: 100%;
     display: block;
 }
-
 
 footer {
     display: flex;
@@ -202,4 +201,23 @@ footer {
 .footer {
     margin: 20px;
     text-decoration: none;
+}
+
+.button {
+  background-color: white;
+  border: 3px solid steelblue;
+  color: black;
+  transition: background-color 1s ease-in, color .5s ease-in;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.button:hover {
+    background-color: steelblue;
+    color: whitesmoke;
+    transition-duration: 500ms;
 }
